@@ -1,6 +1,9 @@
-<div style="margin-bottom: 10px;">
-  Student: {{student.name}}
-  <div *ngIf="student.isJedi">
-    Jedi Temple: Coruscant
+<div style="margin-bottom: 10px;" *ngIf="student">
+  Student: {{student?.name}}
+  <div *ngIf="student?.isJedi">
+    Jedi Temple: {{student?.temple}}
   </div>
+</div>
+<div *ngIf="!student">
+  <p>Dados não recebidos</p>
 </div>
