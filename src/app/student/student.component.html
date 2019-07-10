@@ -1,7 +1,11 @@
 <div style="margin-bottom: 10px;" *ngIf="student">
-  Student: {{student?.name}}
-  <div *ngIf="student?.isJedi">
+  Student: <a (click)="clicked()" href="#">
+    {{student?.name}}
+  </a>
+  <div *ngIf="student?.isJedi"> <button (click)="description.focus()">Focus!</button>
     Jedi Temple: {{student?.temple}}
+    <br/>
+    <textarea #description></textarea>
   </div>
 </div>
 <div *ngIf="!student">
