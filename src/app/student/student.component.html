@@ -1,6 +1,6 @@
 <div style="margin-bottom: 10px;">
   Student: {{student.name}}
-  <div [hidden]="!student.isJedi">
+  <div *ngIf="student.isJedi">
     Jedi Temple: Coruscant
   </div>
 </div>
